@@ -1,0 +1,10 @@
+<h1>All the flats</h1>
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <%= link_to flat do %>
+        <%= flat.name %> (<strong>💶 <%= flat.price %></strong>)
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h1><%= @flat.name %></h1>
+
+<%= link_to 'Create a review', new_flat_review_path(@flat) %>
+
+<div>
+  <% @flat.reviews.order(id: :desc).each do |review| %>
+    <p><%= review.text %> (<%= stars(review) %>)<p>
+  <% end %>
+</div>
+
+<%= link_to '< BACK', root_path %>

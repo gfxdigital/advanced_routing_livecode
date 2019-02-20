@@ -1,0 +1,7 @@
+<h1>Adding new review for <%= @flat.name %></h1>
+
+<%= simple_form_for [@flat, @review] do |f| %>
+  <%= f.input :text %>
+  <%= f.input :rating, as: :select, collection: 0..5 %>
+  <%= f.submit %>
+<% end %>
